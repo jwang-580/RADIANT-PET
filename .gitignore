@@ -1,0 +1,51 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+
+# Python/editor caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.idea/
+.vscode/
+.agent/
+.agents/
+
+# Medical images and derived volumes
+*.nii
+*.nii.gz
+*.dcm
+*.dicom
+nnunet/
+autopet/
+!eval/evaluation_results/autopet/
+!eval/evaluation_results/autopet/*.csv
+
+# Local/private datasets and reports. Public AutoPET datasets under
+# data/autopet_nnunet and data/autopet_threshold are intentionally tracked.
+data/dataset/
+data/*.csv
+data/*.jsonl
+data/*.arrow
+GRPO/data/
+
+# Model weights, adapters, and training state
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.bin
+checkpoint-*/
+outputs*/
+lora*/
+unsloth_compiled_cache/
+NLP/models/
+
+# Generated predictions, metrics, and scheduler logs
+*.out
+*.err
+*.log
